@@ -98,7 +98,15 @@ function getClientEnvironment(publicUrl) {
     }, {}),
   };
 
-  return { raw, stringified };
+  
+  const isTest = process.env.Test === 'true';
+
+  return { raw, stringified: {
+    ...stringified,
+    __HOST: isTest
+    ? `'testLink'`
+    : `'localLink'`,
+  } };
 }
 
 module.exports = getClientEnvironment;
