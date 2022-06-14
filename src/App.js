@@ -5,7 +5,7 @@ import { observer } from 'mobx-react'
 import { Provider } from 'mobx-react'
 import PageLayout from '@/components/PageLayout';
 import Loading from '@/components/Loading';
-import 'antd/dist/antd.css'
+import 'antd/dist/antd.min.css'
 
 
 const App = ({ store }) => {
